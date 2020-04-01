@@ -13,8 +13,8 @@
 
     <d-front-matter>
         <script type="text/json">{
-  "title": "",
-  "description": "",
+  "title": "Thread: Circuits",
+  "description": "What can we learn if we invest heavily in reverse engineering a single neural network?",
   "authors": [
 
   ],
@@ -37,7 +37,7 @@
 
     <d-title>
         <h1>Thread: <i>Circuits</i></h1>
-        <p>What happens if researchers spends thousands of hours reverse-engineering a single neural network?</p>
+        <p style="font-size: 160%;">What can we learn if we invest heavily in reverse engineering a single neural network?</p>
     </d-title>
 
     <style>
@@ -50,7 +50,11 @@
 
         <p>
             In the original narrative of deep learning, each neuron builds progressively more abstract, meaningful features by composing features in the preceding layer.
-            What happens if you take this story really seriously -- spending thousands of hours characterizing the neurons of a single model and tracing their connections?
+            In recent years, there's been some skepticism of this view, but what happens if you take it really seriously?
+          </p>
+          <p>
+            InceptionV1 is a classic vision model with around 10,000 unique neurons -- a large number, but still on a scale that a group effort could attack.
+            What if you simply go through the model, neuron by neuron, trying to understand each one and the connections between them?
             The circuits collaboration aims to find out.
         </p>
 
@@ -139,8 +143,9 @@
                     </div>
                 </header>
                 <p class="summary">
-                    Future articles will explore deep dives into individual features and circuits.
-                    To set the stage, this article gives a high-level overview of the features in those layers.
+                  An overview of all the neurons in the first five layers of InceptionV1,
+                  organized into a taxonomy of "neuron groups."
+                  This article sets the stage for future articles to deep dives into particular aspects of early vision.
                     <br><br>
                     <a class="continue" href="response-1/">
                         Read Full Article
@@ -179,10 +184,11 @@
             We believe that that reconciling faster and more continuous approaches to publication with review and discussion is an important open problem in scientific publishing.
           </p>
           <p>
-            Threads are collections of short articles, experiments, and critical commentary around an emerging or unusual research topic.
-            They are intended to be less earlier stage than a full Distill paper,
-            and allow for more fluid publishing, feedback and interaction on early stage results.
-            Thinks a cross  between a Twitter thread, an academic workshop, and a book of  collected essays.
+            Threads are collections of short articles, experiments, and critical commentary around a narrow or unusual research topic, along with a slack channel for real time discussion and collaboration.
+            They are intended to be earlier stage than a full Distill paper,
+            and allow for more fluid publishing, feedback and discussion.
+            We also hope they'll allow for wider participation.
+            Think of a cross  between a Twitter thread, an academic workshop, and a book of collected essays.
           </p>
           <p>
             Threads are very much an experiment.
