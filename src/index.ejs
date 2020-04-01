@@ -1,0 +1,219 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://distill.pub/template.v2.js"></script>
+    <style>
+        <%=require("raw-loader!../static/style.css") %>
+    </style>
+</head>
+
+<body>
+
+    <d-front-matter>
+        <script type="text/json">{
+  "title": "",
+  "description": "",
+  "authors": [
+
+  ],
+  "katex": {
+    "delimiters": [
+      {
+        "left": "$",
+        "right": "$",
+        "display": false
+      },
+      {
+        "left": "$$",
+        "right": "$$",
+        "display": true
+      }
+    ]
+  }
+  }</script>
+    </d-front-matter>
+
+    <d-title>
+        <h1>Thread: <i>Circuits</i></h1>
+        <p>What happens if researchers spends thousands of hours reverse-engineering a single neural network?</p>
+    </d-title>
+
+    <style>
+        .authors-affiliations {
+            display: none;
+        }
+    </style>
+
+    <d-article>
+
+        <p>
+            In the original narrative of deep learning, each neuron builds progressively more abstract, meaningful features by composing features in the preceding layer.
+            What happens if you take this story really seriously -- spending thousands of hours characterizing the neurons of a single model and tracing their connections?
+            The circuits collaboration aims to find out.
+        </p>
+
+
+        <p>
+        </p>
+
+
+
+        <h2>Articles & Comments</h2>
+
+        <p>
+          The natural unit of publication for investigating circuits seems to be short papers on individual circuits or small families of features.
+          Compared to normal machine learning papers, this is a small and unusual topic for a paper.
+        </p>
+
+        <p>
+          To facilitate exploration of this direction, Distill is inviting a “thread” of short articles on circuits,
+          interspersed with critical commentary by experts in adjacent fields.
+          The thread will be a living document, with new articles added over time,
+          organized through an open slack channel (#circuits in the <a href="http://slack.distill.pub">Distill slack</a>).
+          Content in this thread should be seen as early stage exploratory research.
+        </p>
+
+        <p>
+          Articles and comments are presented below in chronological order:
+        </p>
+
+
+
+        <div id="commentaries" class="articles">
+
+
+            <article id="article-1">
+                <div class=icon></div>
+                <header>
+                    <h3>
+                        <a href="response-1/">Zoom In: An Introduction to Circuits</a>
+                    </h3>
+                    <div class="authors-affiliations grid">
+                        <h3>Authors</h3>
+                        <h3>Affiliations</h3>
+                        <p class="author" style="line-height: 1.5; margin-top: 4px;">
+                            <a class="name" href="">Chris Olah</a>,
+                            <a class="name" href="">Nick Cammarata</a>,
+                            <a class="name" href="">Ludwig Schubert</a>,
+                            <a class="name" href="">Gabriel Goh</a>,
+                            <a class="name" href="">Michael Petrov</a>,
+                            <a class="name" href="">Shan Carter</a>
+                        </p>
+                        <p class="affiliation">
+                            <a class="affiliation" href="">OpenAI</a>
+                        </p>
+                    </div>
+                </header>
+                <p class="summary">
+                <!--<span style="display:block; ---grid-column-start: text-end; ---grid-column-end: screen-end; ">
+                  <img src="images/thumbnail-1.jpg" style="width:80%; margin-top: 10px; margin-bottom: 30px;" />
+                </span>-->
+                  Does it make sense to treat individual neurons and the connections between them as a serious object of study?
+                  This essay proposes three claims which, if true, might justify serious inquiry into them:
+                  the existence of meaningful features, the existence of meaningful circuits between features, and the universality of those features and circuits.
+                  <br><br>
+                  It also discuses historical successes of science "zooming in," whether we should be concerned about this research being qualitative, and approaches to rigorous investigation.
+                  <br><br>
+                  <a class="continue" href="response-1/">Read Full Article</a>
+                </p>
+
+            </article>
+
+            <article id="article-2">
+                <div class=icon></div>
+                <header>
+                    <h3>
+                        <a href="response-1/">An Overview of Early Vision in InceptionV1</a>
+                    </h3>
+                    <div class="authors-affiliations grid">
+                        <h3>Authors</h3>
+                        <h3>Affiliations</h3>
+                        <p class="author">
+                            <a class="name" href="https://znah.net/">TBD</a>
+                        </p>
+                        <p class="affiliation">
+                            <a class="affiliation" href=""></a>
+                        </p>
+                    </div>
+                </header>
+                <p class="summary">
+                    Future articles will explore deep dives into individual features and circuits.
+                    To set the stage, this article gives a high-level overview of the features in those layers.
+                    <br><br>
+                    <a class="continue" href="response-1/">
+                        Read Full Article
+                    </a>
+                </p>
+            </article>
+          </div>
+
+          <div class="info">
+              <h4>This is a living document</h4>
+              <p>
+                  Expect more articles on this topic, along with critical comments from experts.
+              </p>
+          </div>
+
+          <h2>Get Involved</h2>
+
+          <p>
+              The Circuits thread is open to articles exploring individual
+              features, circuits, and their organization within neural networks.
+              Critical commentary and discussion of existing articles is also welcome.
+              The thread is organized through the open <code>#circuits</code> channel on the <a href="slack.distill.pub">Distill slack</a>.
+              Articles can be suggested there, and will be included at the discretion of previous authors in the thread,
+              or in the case of disagreement by an uninvolved editor.
+          </p>
+
+          <p>
+            If you would like get involved but don't know where to start,
+            small projects may be available if you ask in the channel.
+          </p>
+
+          <h2>About the Thread Format</h2>
+
+          <p>
+            Part of Distill's mandate is to experiment with new forms of scientific publishing.
+            We believe that that reconciling faster and more continuous approaches to publication with review and discussion is an important open problem in scientific publishing.
+          </p>
+          <p>
+            Threads are collections of short articles, experiments, and critical commentary around an emerging or unusual research topic.
+            They are intended to be less earlier stage than a full Distill paper,
+            and allow for more fluid publishing, feedback and interaction on early stage results.
+            Thinks a cross  between a Twitter thread, an academic workshop, and a book of  collected essays.
+          </p>
+          <p>
+            Threads are very much an experiment.
+            We think it's possible they're a great format, and also possible they're terrible.
+            We plan to trial two such threads and then re-evaluate our thought on the format.
+          </p>
+
+    </d-article>
+
+    <d-appendix>
+
+
+
+        <h3>Citation Information</h3>
+        <p>
+            If you wish to cite this thread as a whole, citation information can be found below.
+            The author order is all participants in the thread in alphabetical order.
+            Since this is a living document, the citation may add additional authors as it evolves.
+            You can also cite individual articles using the citation information provided at the
+            bottom of the corresponding article.
+        </p>
+
+
+
+
+
+
+        <d-footnote-list></d-footnote-list>
+        <d-citation-list></d-citation-list>
+    </d-appendix>
+
+    <d-bibliography src="bibliography.bib"></d-bibliography>
+
+</body>
