@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="http://distill.pub/template.v2.js"></script>
-    <style>
-        .subgrid {
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="http://distill.pub/template.v2.js"></script>
+  <style>
+    .subgrid {
 	grid-column: screen;
 	display: grid;
 	grid-template-columns: inherit;
@@ -183,225 +183,272 @@ article#rebuttal {
 	color: #2e6db7;
 }
 
-    </style>
+  </style>
 </head>
 
 <body>
-
-    <d-front-matter>
-        <script type="text/json">{
-  "title": "Thread: Circuits",
-  "description": "What can we learn if we invest heavily in reverse engineering a single neural network?",
-  "authors": [
-
-  ],
-  "katex": {
-    "delimiters": [
+  <d-front-matter>
+    <script type="text/json">
       {
-        "left": "$",
-        "right": "$",
-        "display": false
-      },
-      {
-        "left": "$$",
-        "right": "$$",
-        "display": true
-      }
-    ]
-  }
-  }</script>
-    </d-front-matter>
-
-    <d-title>
-        <h1>Thread: <i>Circuits</i></h1>
-        <p style="font-size: 160%;">What can we learn if we invest heavily in reverse engineering a single neural network?</p>
-    </d-title>
-
-    <style>
-        .authors-affiliations {
-            display: none;
+        "title": "Thread: Circuits",
+        "description": "What can we learn if we invest heavily in reverse engineering a single neural network?",
+        "authors": [
+          {
+            "author": "Nick Cammarata",
+            "authorURL": "http://nickcammarata.com",
+            "affiliation": "OpenAI",
+            "affiliationURL": "https://openai.com"
+          },
+          {
+            "author": "Shan Carter",
+            "authorURL": "http://shancarter.com",
+            "affiliation": "OpenAI",
+            "affiliationURL": "https://openai.com"
+          },
+          {
+            "author": "Gabriel Goh",
+            "authorURL": "http://gabgoh.github.io",
+            "affiliation": "OpenAI",
+            "affiliationURL": "https://openai.com"
+          },
+          {
+            "author": "Chris Olah",
+            "authorURL": "https://colah.github.io",
+            "affiliation": "OpenAI",
+            "affiliationURL": "https://openai.com"
+          },
+          {
+            "author": "Michael Petrov",
+            "authorURL": "https://twitter.com/mpetrov",
+            "affiliation": "OpenAI",
+            "affiliationURL": "https://openai.com"
+          },
+          {
+            "author": "Ludwig Schubert",
+            "authorURL": "https://schubert.io/",
+            "affiliation": "OpenAI",
+            "affiliationURL": "https://openai.com"
+          }
+        ],
+        "katex": {
+          "delimiters": [
+            {
+              "left": "$",
+              "right": "$",
+              "display": false
+            },
+            {
+              "left": "$$",
+              "right": "$$",
+              "display": true
+            }
+          ]
         }
-    </style>
+      }
+    </script>
+  </d-front-matter>
 
-    <d-article>
+  <d-title>
+    <h1>Thread: <i>Circuits</i></h1>
+    <p style="font-size: 160%;">
+      What can we learn if we invest heavily in reverse engineering a single
+      neural network?
+    </p>
+  </d-title>
 
-        <p>
-            In the original narrative of deep learning, each neuron builds progressively more abstract, meaningful features by composing features in the preceding layer.
-            In recent years, there's been some skepticism of this view, but what happens if you take it really seriously?
-          </p>
-          <p>
-            InceptionV1 is a classic vision model with around 10,000 unique neurons -- a large number, but still on a scale that a group effort could attack.
-            What if you simply go through the model, neuron by neuron, trying to understand each one and the connections between them?
-            The circuits collaboration aims to find out.
-        </p>
+  <style>
+    .authors-affiliations {
+      display: none;
+    }
+  </style>
 
+  <d-article>
+    <p>
+      In the original narrative of deep learning, each neuron builds
+      progressively more abstract, meaningful features by composing features in
+      the preceding layer. In recent years, there's been some skepticism of this
+      view, but what happens if you take it really seriously?
+    </p>
+    <p>
+      InceptionV1 is a classic vision model with around 10,000 unique neurons --
+      a large number, but still on a scale that a group effort could attack.
+      What if you simply go through the model, neuron by neuron, trying to
+      understand each one and the connections between them? The circuits
+      collaboration aims to find out.
+    </p>
 
-        <p>
-        </p>
+    <p></p>
 
+    <h2>Articles & Comments</h2>
 
+    <p>
+      The natural unit of publication for investigating circuits seems to be
+      short papers on individual circuits or small families of features.
+      Compared to normal machine learning papers, this is a small and unusual
+      topic for a paper.
+    </p>
 
-        <h2>Articles & Comments</h2>
+    <p>
+      To facilitate exploration of this direction, Distill is inviting a
+      “thread” of short articles on circuits, interspersed with critical
+      commentary by experts in adjacent fields. The thread will be a living
+      document, with new articles added over time, organized through an open
+      slack channel (#circuits in the
+      <a href="http://slack.distill.pub">Distill slack</a>). Content in this
+      thread should be seen as early stage exploratory research.
+    </p>
 
-        <p>
-          The natural unit of publication for investigating circuits seems to be short papers on individual circuits or small families of features.
-          Compared to normal machine learning papers, this is a small and unusual topic for a paper.
-        </p>
+    <p>
+      Articles and comments are presented below in chronological order:
+    </p>
 
-        <p>
-          To facilitate exploration of this direction, Distill is inviting a “thread” of short articles on circuits,
-          interspersed with critical commentary by experts in adjacent fields.
-          The thread will be a living document, with new articles added over time,
-          organized through an open slack channel (#circuits in the <a href="http://slack.distill.pub">Distill slack</a>).
-          Content in this thread should be seen as early stage exploratory research.
-        </p>
-
-        <p>
-          Articles and comments are presented below in chronological order:
-        </p>
-
-
-
-        <div id="commentaries" class="articles">
-
-
-            <article id="article-1">
-                <div class=icon></div>
-                <header>
-                    <h3>
-                        <a href="zoom-in/">Zoom In: An Introduction to Circuits</a>
-                    </h3>
-                    <div class="authors-affiliations grid">
-                        <h3>Authors</h3>
-                        <h3>Affiliations</h3>
-                        <p class="author" style="line-height: 1.5; margin-top: 4px;">
-                            <a class="name" href="https://colah.github.io/">Chris Olah</a>,
-                            <a class="name" href="http://nickcammarata.com/">Nick Cammarata</a>,
-                            <a class="name" href="https://schubert.io/">Ludwig Schubert</a>,
-                            <a class="name" href="http://gabgoh.github.io/">Gabriel Goh</a>,
-                            <a class="name" href="https://twitter.com/mpetrov">Michael Petrov</a>,
-                            <a class="name" href="http://shancarter.com/">Shan Carter</a>
-                        </p>
-                        <p class="affiliation">
-                            <a class="affiliation" href="https://openai.com/">OpenAI</a>
-                        </p>
-                    </div>
-                </header>
-                <p class="summary">
-                <!--<span style="display:block; ---grid-column-start: text-end; ---grid-column-end: screen-end; ">
+    <div id="commentaries" class="articles">
+      <article id="article-1">
+        <div class="icon"></div>
+        <header>
+          <h3>
+            <a href="zoom-in/">Zoom In: An Introduction to Circuits</a>
+          </h3>
+          <div class="authors-affiliations grid">
+            <h3>Authors</h3>
+            <h3>Affiliations</h3>
+            <p class="author" style="line-height: 1.5; margin-top: 4px;">
+              <a class="name" href="https://colah.github.io/">Chris Olah</a>,
+              <a class="name" href="http://nickcammarata.com/">Nick Cammarata</a
+              >,
+              <a class="name" href="https://schubert.io/">Ludwig Schubert</a>,
+              <a class="name" href="http://gabgoh.github.io/">Gabriel Goh</a>,
+              <a class="name" href="https://twitter.com/mpetrov"
+                >Michael Petrov</a
+              >,
+              <a class="name" href="http://shancarter.com/">Shan Carter</a>
+            </p>
+            <p class="affiliation">
+              <a class="affiliation" href="https://openai.com/">OpenAI</a>
+            </p>
+          </div>
+        </header>
+        <p class="summary">
+          <!--<span style="display:block; ---grid-column-start: text-end; ---grid-column-end: screen-end; ">
                   <img src="images/thumbnail-1.jpg" style="width:80%; margin-top: 10px; margin-bottom: 30px;" />
                 </span>-->
-                  Does it make sense to treat individual neurons and the connections between them as a serious object of study?
-                  This essay proposes three claims which, if true, might justify serious inquiry into them:
-                  the existence of meaningful features, the existence of meaningful circuits between features, and the universality of those features and circuits.
-                  <br><br>
-                  It also discuses historical successes of science "zooming in," whether we should be concerned about this research being qualitative, and approaches to rigorous investigation.
-                  <br><br>
-                  <a class="continue" href="zoom-in/">Read Full Article</a>
-                </p>
-
-            </article>
-
-            <article id="article-2">
-                <div class=icon></div>
-                <header>
-                    <h3>
-                        <a href="early-vision/">An Overview of Early Vision in InceptionV1</a>
-                    </h3>
-                    <div class="authors-affiliations grid">
-                        <h3>Authors</h3>
-                        <h3>Affiliations</h3>
-                        <p class="author" style="line-height: 1.5; margin-top: 4px;">
-                          <a class="name" href="https://colah.github.io/">Chris Olah</a>,
-                          <a class="name" href="http://nickcammarata.com/">Nick Cammarata</a>,
-                          <a class="name" href="https://schubert.io/">Ludwig Schubert</a>,
-                          <a class="name" href="http://gabgoh.github.io/">Gabriel Goh</a>,
-                          <a class="name" href="https://twitter.com/mpetrov">Michael Petrov</a>,
-                          <a class="name" href="http://shancarter.com/">Shan Carter</a>
-                      </p>
-                      <p class="affiliation">
-                          <a class="affiliation" href="https://openai.com/">OpenAI</a>
-                      </p>
-                    </div>
-                </header>
-                <p class="summary">
-                  An overview of all the neurons in the first five layers of InceptionV1,
-                  organized into a taxonomy of "neuron groups."
-                  This article sets the stage for future deep dives into particular aspects of early vision.
-                    <br><br>
-                    <a class="continue" href="early-vision/">
-                        Read Full Article
-                    </a>
-                </p>
-            </article>
-          </div>
-
-          <div class="info">
-              <h4>This is a living document</h4>
-              <p>
-                  Expect more articles on this topic, along with critical comments from experts.
-              </p>
-          </div>
-
-          <h2>Get Involved</h2>
-
-          <p>
-              The Circuits thread is open to articles exploring individual
-              features, circuits, and their organization within neural networks.
-              Critical commentary and discussion of existing articles is also welcome.
-              The thread is organized through the open <code>#circuits</code> channel on the <a href="slack.distill.pub">Distill slack</a>.
-              Articles can be suggested there, and will be included at the discretion of previous authors in the thread,
-              or in the case of disagreement by an uninvolved editor.
-          </p>
-
-          <p>
-            If you would like get involved but don't know where to start,
-            small projects may be available if you ask in the channel.
-          </p>
-
-          <h2>About the Thread Format</h2>
-
-          <p>
-            Part of Distill's mandate is to experiment with new forms of scientific publishing.
-            We believe that that reconciling faster and more continuous approaches to publication with review and discussion is an important open problem in scientific publishing.
-          </p>
-          <p>
-            Threads are collections of short articles, experiments, and critical commentary around a narrow or unusual research topic, along with a slack channel for real time discussion and collaboration.
-            They are intended to be earlier stage than a full Distill paper,
-            and allow for more fluid publishing, feedback and discussion.
-            We also hope they'll allow for wider participation.
-            Think of a cross  between a Twitter thread, an academic workshop, and a book of collected essays.
-          </p>
-          <p>
-            Threads are very much an experiment.
-            We think it's possible they're a great format, and also possible they're terrible.
-            We plan to trial two such threads and then re-evaluate our thought on the format.
-          </p>
-
-    </d-article>
-
-    <d-appendix>
-
-
-
-        <h3>Citation Information</h3>
-        <p>
-            If you wish to cite this thread as a whole, citation information can be found below.
-            The author order is all participants in the thread in alphabetical order.
-            Since this is a living document, the citation may add additional authors as it evolves.
-            You can also cite individual articles using the citation information provided at the
-            bottom of the corresponding article.
+          Does it make sense to treat individual neurons and the connections
+          between them as a serious object of study? This essay proposes three
+          claims which, if true, might justify serious inquiry into them: the
+          existence of meaningful features, the existence of meaningful circuits
+          between features, and the universality of those features and circuits.
+          <br /><br />
+          It also discuses historical successes of science "zooming in," whether
+          we should be concerned about this research being qualitative, and
+          approaches to rigorous investigation.
+          <br /><br />
+          <a class="continue" href="zoom-in/">Read Full Article</a>
         </p>
+      </article>
 
+      <article id="article-2">
+        <div class="icon"></div>
+        <header>
+          <h3>
+            <a href="early-vision/"
+              >An Overview of Early Vision in InceptionV1</a
+            >
+          </h3>
+          <div class="authors-affiliations grid">
+            <h3>Authors</h3>
+            <h3>Affiliations</h3>
+            <p class="author" style="line-height: 1.5; margin-top: 4px;">
+              <a class="name" href="https://colah.github.io/">Chris Olah</a>,
+              <a class="name" href="http://nickcammarata.com/">Nick Cammarata</a
+              >,
+              <a class="name" href="https://schubert.io/">Ludwig Schubert</a>,
+              <a class="name" href="http://gabgoh.github.io/">Gabriel Goh</a>,
+              <a class="name" href="https://twitter.com/mpetrov"
+                >Michael Petrov</a
+              >,
+              <a class="name" href="http://shancarter.com/">Shan Carter</a>
+            </p>
+            <p class="affiliation">
+              <a class="affiliation" href="https://openai.com/">OpenAI</a>
+            </p>
+          </div>
+        </header>
+        <p class="summary">
+          An overview of all the neurons in the first five layers of
+          InceptionV1, organized into a taxonomy of "neuron groups." This
+          article sets the stage for future deep dives into particular aspects
+          of early vision.
+          <br /><br />
+          <a class="continue" href="early-vision/">
+            Read Full Article
+          </a>
+        </p>
+      </article>
+    </div>
 
+    <div class="info">
+      <h4>This is a living document</h4>
+      <p>
+        Expect more articles on this topic, along with critical comments from
+        experts.
+      </p>
+    </div>
 
+    <h2>Get Involved</h2>
 
+    <p>
+      The Circuits thread is open to articles exploring individual features,
+      circuits, and their organization within neural networks. Critical
+      commentary and discussion of existing articles is also welcome. The thread
+      is organized through the open <code>#circuits</code> channel on the
+      <a href="slack.distill.pub">Distill slack</a>. Articles can be suggested
+      there, and will be included at the discretion of previous authors in the
+      thread, or in the case of disagreement by an uninvolved editor.
+    </p>
 
+    <p>
+      If you would like get involved but don't know where to start, small
+      projects may be available if you ask in the channel.
+    </p>
 
-        <d-footnote-list></d-footnote-list>
-        <d-citation-list></d-citation-list>
-    </d-appendix>
+    <h2>About the Thread Format</h2>
 
-    <d-bibliography src="bibliography.bib"></d-bibliography>
+    <p>
+      Part of Distill's mandate is to experiment with new forms of scientific
+      publishing. We believe that that reconciling faster and more continuous
+      approaches to publication with review and discussion is an important open
+      problem in scientific publishing.
+    </p>
+    <p>
+      Threads are collections of short articles, experiments, and critical
+      commentary around a narrow or unusual research topic, along with a slack
+      channel for real time discussion and collaboration. They are intended to
+      be earlier stage than a full Distill paper, and allow for more fluid
+      publishing, feedback and discussion. We also hope they'll allow for wider
+      participation. Think of a cross between a Twitter thread, an academic
+      workshop, and a book of collected essays.
+    </p>
+    <p>
+      Threads are very much an experiment. We think it's possible they're a
+      great format, and also possible they're terrible. We plan to trial two
+      such threads and then re-evaluate our thought on the format.
+    </p>
+  </d-article>
 
+  <d-appendix>
+    <h3>Citation Information</h3>
+    <p>
+      If you wish to cite this thread as a whole, citation information can be
+      found below. The author order is all participants in the thread in
+      alphabetical order. Since this is a living document, the citation may add
+      additional authors as it evolves. You can also cite individual articles
+      using the citation information provided at the bottom of the corresponding
+      article.
+    </p>
+
+    <d-footnote-list></d-footnote-list>
+    <d-citation-list></d-citation-list>
+  </d-appendix>
+
+  <d-bibliography src="bibliography.bib"></d-bibliography>
 <script type="text/javascript" src="index.bundle.js"></script></body>
